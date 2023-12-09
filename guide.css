@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8C888C;
+    color: #262524;
+}
+
+header, footer {
+    background: #262524;
+    color: #ABD97E;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #ABD97E;
+    padding: 1em;
+    align-items: center;
+}
+
+nav a, .dropbtn {
+    text-decoration: none;
+    color: #262524;
+    margin: 0 10px;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, .dropdown:hover .dropbtn, .settings-dropdown:hover .dropbtn {
+    background: #ABD97E;
+    color: #fff;
+}
+
+.dropdown-content, .settings-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content, .settings-dropdown:hover .settings-content {
+    display: block;
+}
+
+/* Video grid and video box styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: auto auto; /* Auto-size rows */
+    gap: 1em;
+    padding: 1em;
+    background: #262524;
+}
+
+.video {
+    max-height: 250px;
+    border-radius: 5px;
+    overflow: hidden; /* This ensures that the border-radius clips the video */
+    position: relative;
+}
+
+.video video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 250px;
+}
+
+.video, .video-description, .video-description-horizontal {
+    padding: 1em;
+    border-radius: 5px;
+    background: #262524;
+}
+
+.video iframe {
+    width: 100%;
+    height: 56.25vw;
+    max-height: 400px;
+    border-radius: 5px;
+}
+
+.video.vertical, .video.horizontal {
+    grid-column: span 1;
+}
+
+.video-description {
+    color: #ABD97E;
+    border-left: 2px solid #8C888C;
+    border-radius: 0 5px 5px 0;
+}
+
+.video-description-horizontal {
+    color: #ABD97E;
+    border-left: 2px solid #8C888C;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .video, .video-description {
+        grid-column: 1;
+    }
+    .video iframe {
+        height: 200px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #9AC1D9;
+}
+
+body.dark-mode nav, body.dark-mode nav a, body.dark-mode .dropbtn, 
+body.dark-mode .dropdown-content a:hover, body.dark-mode .settings-dropdown .dropbtn {
+    background-color: #000000;
+    color: #9AC1D9;
+}
+
+body.dark-mode .video, 
+body.dark-mode .video-grid, 
+body.dark-mode .video-description, 
+body.dark-mode .video-description-horizontal {
+    background: #262524;
+    color: #9AC1D9;
+}
+

@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8C888C;
+    color: #262524;
+}
+
+header {
+    background: #262524;
+    color: #ABD97E;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #ABD97E;
+    padding: 1em;
+    align-items: center;
+}
+
+nav a, .dropbtn {
+    text-decoration: none;
+    color: #262524;
+    margin: 0 10px;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background: #F25D50;
+    color: #fff;
+}
+
+.main-image {
+    width: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    gap: 2em;
+}
+
+.additional-content {
+    background: #ABD97E;
+    padding: 1em;
+    flex: 1;
+}
+
+.image-box {
+    position: relative;
+    background: #262524;
+    text-align: center;
+    flex: 1;
+}
+
+.image-box img {
+    width: 100%;
+    margin-top: 1em;
+    display: none; /* Hide all images by default */
+}
+
+.image-box img:first-of-type {
+    display: block; /* Show the first image by default */
+}
+
+/* Arrow button styles */
+.image-box .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    display: block; /* Make sure the button is always displayed */
+}
+
+.image-box .left-arrow {
+    left: 10px;
+}
+
+.image-box .right-arrow {
+    right: 10px;
+}
+
+/* Hover effect for the arrows */
+.image-box .arrow:hover {
+    background: rgba(128, 128, 128, 0.5); /* Semi-transparent background on hover */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #ABD97E;
+    color: rgba(0,0,0,0.8);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Settings dropdown */
+.settings-dropdown .dropbtn {
+    font-size: 18px; /* Adjust size as needed */
+    padding: 0.5em;
+}
+
+.settings-content a {
+    padding: 10px 20px;
+}
+
+/* Add FontAwesome for the cog icon */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.dropdown .dropbtn, .settings-dropdown .dropbtn {
+    background-color: #ABD97E; /* Or any other color you want in normal mode */
+    color: #262524; /* Text color in normal mode */
+    /* ... other styles ... */
+}
+
+/* Ensure that the dropdown and settings icon have the correct styles in dark mode */
+body.dark-mode .dropdown .dropbtn, body.dark-mode .settings-dropdown .dropbtn {
+    background-color: #000000; /* Dark mode background color */
+    color: #9AC1D9; /* Dark mode text color */
+}
+
+/* ... rest of the CSS ... */
+
+/* Overriding styles for dark mode */
+body.dark-mode, body.dark-mode nav, body.dark-mode header, body.dark-mode footer {
+    background-color: #000000; /* Black background for dark mode */
+    color: #9AC1D9; /* Blue text color for dark mode */
+}
+
+body.dark-mode a, body.dark-mode nav a:hover, body.dark-mode .dropdown-content a:hover, body.dark-mode .settings-dropdown .dropbtn {
+    color: #9AC1D9; /* Blue text color for links and settings icon in dark mode */
+}
+
+/* Dark mode styles */
+body.dark-mode .additional-content {
+    background-color: #000000; /* Black background for dark mode */
+    color: #9AC1D9; /* Blue text color for dark mode */
+}
+
+footer {
+    background: #262524;
+    color: #ABD97E;
+    text-align: center;
+    padding: 1em;
+}

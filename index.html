@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Stranda Trimpark</title>
+</head>
+<body>
+    <header>
+        <h1>Stranda Trimpark</h1>
+    </header>
+
+    <nav>
+        <a href="guide.html">Guide</a>
+        <a href="utstyr.html">Utstyr</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Eksterne nettsider</button>
+            <div class="dropdown-content">
+                <a href="https://skyfitness.no" target="_blank">Skyfitness</a>
+                <a href="https://spenst.no" target="_blank">Spenst</a>
+                <a href="https://www.nivatrening.no/" target="_blank">Nivå</a>
+                <a href="https://viken.no/halden-vgs/" target="_blank">Halden videregående</a>
+            </div>
+        </div>
+
+        <div class="dropdown settings-dropdown">
+            <button class="dropbtn settings-btn"><i class="fa fa-cog" aria-hidden="true"></i></button>
+            <div class="dropdown-content settings-content">
+                <a href="#" id="toggle-dark-mode">Mørk modus Av/På</a>
+                <a href="#" id="toggle-text-size">Tekststørrelse Av/På</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <main>
+        <!-- Main picture at the top -->
+        <img src="/img/Stranda - Wide (New).jpg" alt="Main Picture" class="main-image">
+
+        <!-- Two rows side by side -->
+        <div class="row">
+            <!-- Left half with additional content -->
+            <div class="additional-content">
+                <h2>Velkommen til Stranda Trimpark!</h2>
+                <p>Oppdag den perfekte kombinasjonen av trening og natur i Stranda Trimpark, lokalsamfunnets foretrukne destinasjon for helse og friluftsliv. Vår døgnåpne park inviterer deg til å oppleve toppmoderne treningsutstyr i rolige og naturskjønne omgivelser, uten å måtte betale medlemskontingent.</p>
+                
+                <h3>Utstyr av høy kvalitet for alle dine treningsmål</h3>
+                <p>Enten du er en erfaren idrettsutøver eller nettopp har begynt å trene, har vi et bredt utvalg av utstyr av høy kvalitet for alle treningsnivåer. Apparatene våre er konstruert for å være holdbare og designet med tanke på din sikkerhet, og gir deg den allsidigheten du trenger for å trene hele kroppen.</p>
+
+                <h3>En park som er mer enn bare et treningsstudio</h3>
+                <p>Stranda Trimpark handler ikke bare om trening, det er en oase. Parken vår ligger i et frodig grøntområde og gir et rolig bakteppe som inspirerer og forynger. Det er et sted der folk samles for å presse grensene sine, slappe av og møte likesinnede treningsentusiaster.</p>
+
+                <h3>Tilgjengelig trening for alle</h3>
+                <p>Tilgjengelighet er kjernen i parkens filosofi. Stranda Trimpark er åpen for alle, hele døgnet, og er et bevis på vårt engasjement for folkehelse og velvære. Det er et sted der det eneste som betyr noe, er ditt ønske om å forbedre deg, å bevege deg og å være en del av et samfunn som verdsetter helse og vitalitet.</p>
+
+                <h3>Bli med i bevegelsen</h3>
+                <p>Ta steget ut og inn i en verden av velvære i Stranda Trimpark. Her får du friheten til å trene etter din egen timeplan, ditt eget tempo og dine egne preferanser. Bli med oss i dag og bli en del av en bevegelse som hyller helse, velvære og friluftsliv!</p>
+
+            </div>
+
+            <!-- Right half with image box -->
+            <div class="image-box">
+                <button class="arrow left-arrow" onclick="prevImage()">◀</button>
+                <div class="image-container">
+                    <img src="/img/Apparat1.jpg" alt="Image 1">
+                    <img src="/img/Apparat3.jpg" alt="Image 2" style="display:none;">
+                    <img src="/img/Apparat5.jpg" alt="Image 3" style="display:none;">
+                </div>
+                <button class="arrow right-arrow" onclick="nextImage()">▶</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Your Website. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
